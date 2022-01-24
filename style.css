@@ -470,6 +470,125 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
+.flex{
+  display: flex;
+}
+
+.hidden{
+  display: none;
+}
+
+.h-40{
+  height: 10rem;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.bg-hero{
+  background-image: url('./images/image-hero-mobile.jpg');
+}
+
+.bg-cover{
+  background-size: cover;
+}
+
+.bg-contain{
+  background-size: contain;
+}
+
+.bg-center{
+  background-position: center;
+}
+
+.bg-no-repeat{
+  background-repeat: no-repeat;
+}
+
+.px-10{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.px-7{
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+.pb-40{
+  padding-bottom: 10rem;
+}
+
+.pb-48{
+  padding-bottom: 12rem;
+}
+
+.pb-60{
+  padding-bottom: 15rem;
+}
+
+.pb-96{
+  padding-bottom: 24rem;
+}
+
+.pb-80{
+  padding-bottom: 20rem;
+}
+
+.pb-72{
+  padding-bottom: 18rem;
+}
+
+.pb-64{
+  padding-bottom: 16rem;
+}
+
+.pt-10{
+  padding-top: 2.5rem;
+}
+
+.pt-8{
+  padding-top: 2rem;
+}
+
+.pt-6{
+  padding-top: 1.5rem;
+}
+
+.pb-\[300px\]{
+  padding-bottom: 300px;
+}
+
+.pb-\[320px\]{
+  padding-bottom: 320px;
+}
+
+.pb-\[220px\]{
+  padding-bottom: 220px;
+}
+
+.pb-\[250px\]{
+  padding-bottom: 250px;
+}
+
+.pb-\[270px\]{
+  padding-bottom: 270px;
+}
+
+.pb-\[240px\]{
+  padding-bottom: 240px;
+}
+
+.pt-7{
+  padding-top: 1.75rem;
+}
+
 .text-\[16px\]{
   font-size: 16px;
 }
