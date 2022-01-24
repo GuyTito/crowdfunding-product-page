@@ -12,6 +12,10 @@ module.exports = {
       fontFamily: {
         sans : ["'Commissioner'", ...defaultTheme.fontFamily.sans],
       },
+      backgroundImage: {
+        "hero": "url('./images/image-hero-mobile.jpg')",
+        "hero-d": "url('./images/image-hero-desktop.jpg')",
+      },
     },
   },
   plugins: [],
