@@ -6,20 +6,20 @@
 
 @layer base{
   h1{
-    @apply font-bold text-2xl
+    @apply font-bold text-xl
   }
   p{
     @apply text-Dark-gray
   }
   section{
-    @apply bg-white mx-5 rounded-md text-center px-3 pt-8 pb-7
+    @apply bg-white mx-5 rounded-md text-center px-4 pt-8 pb-7
   }
   
 }
 
 @layer components{
   .btn-main{
-    @apply rounded-full bg-Moderate-cyan px-5 py-2 text-white
+    @apply rounded-full bg-Moderate-cyan px-6 py-3 text-white
   }
   .btn-bk-mk{
     @apply rounded-full flex items-center bg-Dark-gray
