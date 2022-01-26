@@ -514,7 +514,7 @@ section{
   background-color: hsl(0 0% 48% / var(--tw-bg-opacity));
 }
 
-.figures{
+.stats{
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 700;
