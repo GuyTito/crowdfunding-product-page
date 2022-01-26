@@ -24,4 +24,10 @@
   .btn-bk-mk{
     @apply rounded-full flex items-center bg-Dark-gray
   }
+  .stats{
+    @apply font-bold text-3xl text-black
+  }
+  .divider{
+    @apply h-[0.5px] max-w-[90px] mx-auto bg-black/10 text-center my-5
+  }
 }
