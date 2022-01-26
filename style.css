@@ -553,6 +553,10 @@ section{
   top: -30px;
 }
 
+.mt-5{
+  margin-top: 1.25rem;
+}
+
 .flex{
   display: flex;
 }
@@ -565,8 +569,20 @@ section{
   height: 3rem;
 }
 
+.h-2\.5{
+  height: 0.625rem;
+}
+
+.h-2{
+  height: 0.5rem;
+}
+
 .w-12{
   width: 3rem;
+}
+
+.w-full{
+  width: 100%;
 }
 
 .flex-1{
@@ -598,9 +614,33 @@ section{
   margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.rounded-full{
+  border-radius: 9999px;
+}
+
 .bg-gray-100{
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.bg-gray-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+.bg-gray-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.bg-blue-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+.bg-Moderate-cyan{
+  --tw-bg-opacity: 1;
+  background-color: hsl(176 50% 47% / var(--tw-bg-opacity));
 }
 
 .bg-hero{
@@ -638,4 +678,11 @@ section{
 
 .leading-loose{
   line-height: 2;
+}
+
+@media (prefers-color-scheme: dark){
+  .dark\:bg-gray-700{
+    --tw-bg-opacity: 1;
+    background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+  }
 }
