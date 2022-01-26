@@ -598,8 +598,9 @@ section{
   margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.bg-\[\#FAFAFAFF\]{
-  background-color: #FAFAFAFF;
+.bg-gray-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .bg-hero{
