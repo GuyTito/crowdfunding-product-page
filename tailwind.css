@@ -20,6 +20,12 @@
   h2{
     @apply font-bold text-lg
   }
+  h3{
+    @apply font-bold
+  }
+  h4{
+    @apply font-bold text-Moderate-cyan
+  }
   p{
     @apply text-Dark-gray
   }
