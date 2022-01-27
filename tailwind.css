@@ -48,4 +48,7 @@
   .divider{
     @apply h-px max-w-[90px] mx-auto bg-gray-200 text-center my-5
   }
+  .products-left{
+    @apply font-bold text-3xl text-black
+  }
 }
