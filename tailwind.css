@@ -8,6 +8,9 @@
   h1{
     @apply font-bold text-xl
   }
+  h2{
+    @apply font-bold text-lg
+  }
   p{
     @apply text-Dark-gray
   }
