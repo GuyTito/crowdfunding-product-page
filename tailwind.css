@@ -39,6 +39,9 @@
   .btn-main{
     @apply rounded-full bg-Moderate-cyan px-6 py-3 text-white
   }
+  .btn-disabled{
+    @apply rounded-full bg-Dark-gray px-6 py-3 text-white
+  }
   .btn-bk-mk{
     @apply rounded-full flex items-center bg-Dark-gray
   }
