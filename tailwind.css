@@ -8,6 +8,9 @@
   body{
     @apply text-[16px] relative bg-gray-100
   }
+  header{
+    @apply bg-hero flex justify-between px-5 pt-7 pb-60 bg-cover bg-center bg-no-repeat
+  }
   h1{
     @apply font-bold text-xl
   }
