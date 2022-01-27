@@ -43,7 +43,7 @@
     @apply rounded-full flex items-center bg-Dark-gray
   }
   .stats{
-    @apply font-bold text-3xl text-black
+    @apply font-bold text-4xl text-black
   }
   .divider{
     @apply h-px max-w-[90px] mx-auto bg-gray-200 text-center my-5
