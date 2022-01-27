@@ -11,6 +11,9 @@
   header{
     @apply bg-hero flex justify-between px-5 pt-7 pb-60 bg-cover bg-center bg-no-repeat
   }
+  main{
+    @apply absolute top-[235px] space-y-10
+  }
   h1{
     @apply font-bold text-xl
   }
