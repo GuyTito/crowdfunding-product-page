@@ -425,10 +425,57 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+body{
+  position: relative;
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+  font-size: 16px;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  background-image: url('./images/image-hero-mobile.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 1.75rem;
+  padding-bottom: 15rem;
+}
+
+main{
+  position: absolute;
+  top: 235px;
+}
+
+main > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+}
+
 h1{
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 700;
+}
+
+h2{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+h3{
+  font-weight: 700;
+}
+
+h4{
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: hsl(176 50% 47% / var(--tw-text-opacity));
 }
 
 p{
@@ -444,8 +491,8 @@ section{
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 2rem;
-  padding-bottom: 1.75rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
   text-align: center;
 }
 
@@ -506,6 +553,18 @@ section{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.btn-disabled{
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: hsl(0 0% 48% / var(--tw-bg-opacity));
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .btn-bk-mk{
   display: flex;
   align-items: center;
@@ -515,8 +574,8 @@ section{
 }
 
 .stats{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -534,16 +593,41 @@ section{
   text-align: center;
 }
 
+.product > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
+}
+
+.product{
+  border-radius: 0.5rem;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+  padding: 1.25rem;
+}
+
+.products-left{
+  display: flex;
+  align-items: center;
+}
+
+.products-left > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.products-amt{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .absolute{
   position: absolute;
-}
-
-.relative{
-  position: relative;
-}
-
-.top-\[235px\]{
-  top: 235px;
 }
 
 .left-1\/2{
@@ -615,13 +699,14 @@ section{
   margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.rounded-full{
-  border-radius: 9999px;
+.space-y-7 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.75rem * var(--tw-space-y-reverse));
 }
 
-.bg-gray-100{
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+.rounded-full{
+  border-radius: 9999px;
 }
 
 .bg-gray-200{
@@ -634,39 +719,18 @@ section{
   background-color: hsl(176 50% 47% / var(--tw-bg-opacity));
 }
 
-.bg-hero{
-  background-image: url('./images/image-hero-mobile.jpg');
-}
-
-.bg-cover{
-  background-size: cover;
-}
-
-.bg-center{
-  background-position: center;
-}
-
-.bg-no-repeat{
-  background-repeat: no-repeat;
-}
-
-.px-5{
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-.pt-7{
-  padding-top: 1.75rem;
-}
-
-.pb-60{
-  padding-bottom: 15rem;
-}
-
-.text-\[16px\]{
-  font-size: 16px;
+.text-left{
+  text-align: left;
 }
 
 .leading-loose{
   line-height: 2;
+}
+
+.opacity-10{
+  opacity: 0.1;
+}
+
+.opacity-30{
+  opacity: 0.3;
 }
