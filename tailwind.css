@@ -49,6 +49,9 @@
     @apply h-px max-w-[90px] mx-auto bg-gray-200 text-center my-5
   }
   .products-left{
+    @apply flex items-center space-x-2
+  }
+  .products-amt{
     @apply font-bold text-3xl text-black
   }
 }
