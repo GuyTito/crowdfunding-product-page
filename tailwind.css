@@ -32,6 +32,9 @@
   section{
     @apply bg-white mx-5 rounded-md text-center px-4 py-10
   }
+  input[type="radio"]{
+    @apply h-5 w-5  accent-Dark-cyan
+  }
   
 }
 
