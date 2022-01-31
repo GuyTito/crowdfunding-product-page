@@ -35,6 +35,16 @@
   input[type="radio"]{
     @apply h-5 w-5  accent-Dark-cyan
   }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
   
 }
 
