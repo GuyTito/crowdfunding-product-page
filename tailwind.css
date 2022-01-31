@@ -44,6 +44,7 @@
   /* Firefox */
   input[type=number] {
     -moz-appearance: textfield;
+    @apply pl-2 py-3 rounded-full font-bold outline-none w-full caret-Moderate-cyan
   }
   
 }
@@ -72,5 +73,8 @@
   }
   .products-amt{
     @apply font-bold text-3xl text-black
+  }
+  .div-input{
+    @apply rounded-full border focus-within:border-Moderate-cyan flex items-center pl-5
   }
 }
