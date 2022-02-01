@@ -7,7 +7,8 @@ back_project_btn.onclick = function() {
   selection_modal.style.display = "block"
 }
 
-close_modal_btn.onclick = function() {
+close_modal_btn.onclick = function(e) {
+  e.preventDefault()
   selection_modal.style.display = "none"
 }
 
