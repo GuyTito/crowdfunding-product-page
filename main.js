@@ -20,3 +20,19 @@ window.onclick = function(event) {
     success_modal.style.display = "none"
   }
 }
+
+
+const radio_btns = document.querySelectorAll('input[type="radio"]')
+radio_btns.forEach((radio) => {
+  radio.addEventListener('change', () => {
+    // hide all pledges
+    radio_btns.forEach((radio) => {
+      let pledge = document.querySelector(`#${radio.value}`)
+      if (pledge.classList.contains("hidden")) return
+      else pledge.classList.add('hidden')
+    })
+    // show selected pledge
+    let pledge = document.querySelector(`#${radio.value}`)
+    pledge.classList.remove('hidden')
+  })
+})
