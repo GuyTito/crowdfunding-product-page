@@ -496,6 +496,19 @@ section{
   text-align: center;
 }
 
+form{
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  border-radius: 0.375rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  text-align: center;
+}
+
 input[type="radio"]{
   height: 1.25rem;
   width: 1.25rem;
@@ -666,6 +679,10 @@ input[type=number] {
   border-color: hsl(176 50% 47% / var(--tw-border-opacity));
 }
 
+.fixed{
+  position: fixed;
+}
+
 .absolute{
   position: absolute;
 }
@@ -676,6 +693,18 @@ input[type=number] {
 
 .-top-\[30px\]{
   top: -30px;
+}
+
+.left-0{
+  left: 0px;
+}
+
+.top-0{
+  top: 0px;
+}
+
+.z-10{
+  z-index: 10;
 }
 
 .mt-5{
@@ -700,6 +729,10 @@ input[type=number] {
 
 .h-2{
   height: 0.5rem;
+}
+
+.h-full{
+  height: 100%;
 }
 
 .h-px{
@@ -727,6 +760,10 @@ input[type=number] {
   align-items: center;
 }
 
+.justify-center{
+  justify-content: center;
+}
+
 .justify-between{
   justify-content: space-between;
 }
@@ -749,6 +786,10 @@ input[type=number] {
   margin-bottom: calc(1.75rem * var(--tw-space-y-reverse));
 }
 
+.overflow-auto{
+  overflow: auto;
+}
+
 .rounded-full{
   border-radius: 9999px;
 }
@@ -763,9 +804,18 @@ input[type=number] {
   background-color: hsl(176 50% 47% / var(--tw-bg-opacity));
 }
 
+.bg-black\/40{
+  background-color: rgb(0 0 0 / 0.4);
+}
+
 .bg-gray-300{
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+.py-28{
+  padding-top: 7rem;
+  padding-bottom: 7rem;
 }
 
 .text-left{
