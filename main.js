@@ -31,8 +31,7 @@ radio_btns.forEach((radio) => {
     // hide all pledges
     hideAllPledges()
     // show selected pledge
-    let pledge = document.querySelector(`#${radio.value}`)
-    pledge.classList.remove('hidden')
+    document.querySelector(`#${radio.value}`).classList.remove('hidden')
   })
 })
 
@@ -51,13 +50,12 @@ reward_btns.forEach((reward) => {
     // open selection modal
     selection_modal.style.display = "block"
     // scroll to product
-    document.getElementById(`${reward.dataset.reward}_product`).scrollIntoView({behavior: "smooth", block: "start", inline: "center"})
+    document.getElementById(`${reward.dataset.reward}_product`).scrollIntoView({behavior: "smooth"})
     // check product
     document.querySelector(`input[value=${reward.dataset.reward}]`).checked = true
     // hide all pledges
     hideAllPledges()
     // show selected pledge
-    let pledge = document.querySelector(`#${reward.dataset.reward}`)
-    pledge.classList.remove('hidden')
+    document.querySelector(`#${reward.dataset.reward}`).classList.remove('hidden')
   })
 })
