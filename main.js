@@ -26,16 +26,20 @@ const radio_btns = document.querySelectorAll('input[type="radio"]')
 radio_btns.forEach((radio) => {
   radio.addEventListener('change', () => {
     // hide all pledges
-    radio_btns.forEach((radio) => {
-      let pledge = document.querySelector(`#${radio.value}`)
-      if (pledge.classList.contains("hidden")) return
-      else pledge.classList.add('hidden')
-    })
+    hideAllPledges()
     // show selected pledge
     let pledge = document.querySelector(`#${radio.value}`)
     pledge.classList.remove('hidden')
   })
 })
+
+function hideAllPledges() {
+  radio_btns.forEach((radio) => {
+   let pledge = document.querySelector(`#${radio.value}`)
+   if (pledge.classList.contains("hidden")) return
+   else pledge.classList.add('hidden')
+ })
+}
 
 
 const reward_btns = document.querySelectorAll('.reward')
@@ -48,11 +52,7 @@ reward_btns.forEach((reward) => {
     // check product
     document.querySelector(`input[value=${reward.dataset.reward}]`).checked = true
     // hide all pledges
-    radio_btns.forEach((radio) => {
-      let pledge = document.querySelector(`#${radio.value}`)
-      if (pledge.classList.contains("hidden")) return
-      else pledge.classList.add('hidden')
-    })
+    hideAllPledges()
     // show selected pledge
     let pledge = document.querySelector(`#${reward.dataset.reward}`)
     pledge.classList.remove('hidden')
