@@ -3,15 +3,18 @@ const success_modal = document.getElementById("success_modal")
 const back_project_btn = document.getElementById("back_project")
 const close_modal_btn = document.getElementById("close_modal")
 
+// click on back this project to open selection modal 
 back_project_btn.onclick = function() {
   selection_modal.style.display = "block"
 }
 
+// close selection modal from close button
 close_modal_btn.onclick = function(e) {
   e.preventDefault()
   selection_modal.style.display = "none"
 }
 
+// click away from modal to close it
 window.onclick = function(event) {
   if (event.target == selection_modal) {
     selection_modal.style.display = "none"
