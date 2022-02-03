@@ -67,3 +67,5 @@ form.addEventListener('submit', (e) => {
   selection_modal.style.display = "none"
   success_modal.style.display = "flex"
 })
+
+success_modal.querySelector('section>button').addEventListener('click', () => success_modal.style.display = "none")
