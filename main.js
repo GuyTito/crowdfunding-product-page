@@ -59,3 +59,11 @@ reward_btns.forEach((reward) => {
     document.querySelector(`#${reward.dataset.reward}`).classList.remove('hidden')
   })
 })
+
+
+const form = document.querySelector('form')
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
+  selection_modal.style.display = "none"
+  success_modal.style.display = "flex"
+})
