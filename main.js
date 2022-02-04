@@ -32,15 +32,26 @@ radio_btns.forEach((radio) => {
     hideAllPledges()
     // show selected pledge
     document.querySelector(`#${radio.value}`).classList.remove('hidden')
+    // in case no_reward is selected, set selected_number_input to null
+    // enable selected number input
+    let selected_number_input = document.querySelector(`input[name=${radio.value}]`) || null
+    if (selected_number_input) selected_number_input.disabled = false
   })
 })
 
 function hideAllPledges() {
+  disableNumberInputs()
   radio_btns.forEach((radio) => {
    let pledge = document.querySelector(`#${radio.value}`)
    if (pledge.classList.contains("hidden")) return
    else pledge.classList.add('hidden')
  })
+}
+
+function disableNumberInputs() {
+  document.querySelectorAll("input[type=number]").forEach((input) => {
+    input.disabled = true
+  })
 }
 
 
@@ -57,6 +68,8 @@ reward_btns.forEach((reward) => {
     hideAllPledges()
     // show selected pledge
     document.querySelector(`#${reward.dataset.reward}`).classList.remove('hidden')
+    // enable selected pledge's number input
+    document.querySelector(`input[name=${reward.dataset.reward}]`).disabled = false
   })
 })
 
