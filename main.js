@@ -77,6 +77,12 @@ reward_btns.forEach((reward) => {
 const form = document.querySelector('form')
 form.addEventListener('submit', (e) => {
   e.preventDefault()
+  let formData = new FormData(form)
+  let data = []
+  for(let pair of formData.entries()) {
+    data.push( {[pair[0]]: pair[1]} )
+  }
+  calculateStats(data)
   document.querySelector("input[type=radio]:checked").checked = false
   hideAllPledges()
   selection_modal.style.display = "none"
@@ -84,3 +90,28 @@ form.addEventListener('submit', (e) => {
 })
 
 success_modal.querySelector('section>button').addEventListener('click', () => success_modal.style.display = "none")
+
+
+const target_amount = 100000
+let amount_raised = 89914
+let progress_bar = (amount_raised / target_amount) * 100
+let products_left = {
+  bamboo: 101,
+  black_stand: 64,
+  mahoganny: 0
+}
+let total_backers = 5007
+
+function calculateStats(data){
+  if (data[0].product == 'no_reward') return
+  else {
+    let pledge = {
+      name: data[0].product, 
+      amount: data[1][data[0].product]
+    }
+    amount_raised = amount_raised + parseFloat(pledge.amount)
+    progress_bar = (amount_raised / target_amount) * 100
+    ++total_backers
+    --products_left[pledge.name]
+  }
+}
