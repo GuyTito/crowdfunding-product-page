@@ -21,7 +21,7 @@
     @apply font-bold text-lg
   }
   h3{
-    @apply font-bold
+    @apply font-bold hover:text-Moderate-cyan
   }
   h4{
     @apply font-bold text-Moderate-cyan
@@ -54,7 +54,7 @@
 
 @layer components{
   .btn-main{
-    @apply rounded-full bg-Moderate-cyan px-6 py-3 text-white
+    @apply rounded-full bg-Moderate-cyan px-6 py-3 text-white hover:bg-Dark-cyan
   }
   .btn-disabled{
     @apply rounded-full bg-Dark-gray px-6 py-3 text-white
