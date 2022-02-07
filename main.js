@@ -115,11 +115,17 @@ function calculateStats(data){
   }
   amount_raised = amount_raised + parseFloat(pledge.amount)
   document.getElementById('amount_raised').innerText = `$${(amount_raised).toLocaleString()}`
+
   progress_bar = (amount_raised / TARGET_AMOUNT) * 100
   // round progress_bar to two decimal places
   progress_bar = Math.round(progress_bar * 100) / 100
   document.getElementById('progress_bar').style.width = `${progress_bar}%`
+
   ++total_backers
   document.getElementById('total_backers').innerText = (total_backers).toLocaleString()
+  
   --products_left[pledge.name]
+  document.querySelectorAll(`.${pledge.name}_left`).forEach(element => {
+    element.innerText = products_left[pledge.name]
+  })
 }
