@@ -103,7 +103,10 @@ let products_left = {
 let total_backers = 5007
 
 function calculateStats(data){
-  if (data[0].product == 'no_reward') return
+  if (data[0].product == 'no_reward') {
+    ++total_backers
+    return
+  }
   
   let pledge = {
     name: data[0].product, 
@@ -111,6 +114,8 @@ function calculateStats(data){
   }
   amount_raised = amount_raised + parseFloat(pledge.amount)
   progress_bar = (amount_raised / TARGET_AMOUNT) * 100
+  // round progress_bar to two decimal places
+  progress_bar = Math.round(progress_bar * 100) / 100
   ++total_backers
   --products_left[pledge.name]
 }
