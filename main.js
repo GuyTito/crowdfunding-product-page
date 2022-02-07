@@ -3,7 +3,7 @@ const success_modal = document.getElementById("success_modal")
 const back_project_btn = document.getElementById("back_project")
 const close_modal_btn = document.getElementById("close_modal")
 
-// click on back this project to open selection modal 
+// click on back-this-project button to open selection modal 
 back_project_btn.onclick = function() {
   selection_modal.style.display = "block"
 }
@@ -129,3 +129,17 @@ function calculateStats(data){
     element.innerText = products_left[pledge.name]
   })
 }
+
+
+const bk_mk_btn = document.querySelector('.btn-bk-mk>span')
+bk_mk_btn.addEventListener('click', (e) => {
+  if (bk_mk_btn.innerText == "Bookmark") {
+    bk_mk_btn.innerText = 'Bookmarked'
+    bk_mk_btn.classList.remove('text-Dark-gray')
+    bk_mk_btn.classList.add('text-Dark-cyan')
+  } else{
+    bk_mk_btn.innerText = 'Bookmark'
+    bk_mk_btn.classList.remove('text-Dark-cyan')
+    bk_mk_btn.classList.add('text-Dark-gray')
+  }
+})

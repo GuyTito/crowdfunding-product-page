@@ -15,7 +15,7 @@
     @apply absolute top-[235px] md:top-[310px] space-y-10 min-w-[350px] md:max-w-[773px] left-1/2 -translate-x-1/2
   }
   h1{
-    @apply font-bold text-xl
+    @apply font-bold text-xl md:text-3xl
   }
   h2{
     @apply font-bold text-lg
@@ -60,7 +60,7 @@
     @apply rounded-full bg-Dark-gray px-6 py-3 text-white
   }
   .btn-bk-mk{
-    @apply rounded-full flex items-center bg-Dark-gray
+    @apply rounded-full flex items-center bg-gray-100
   }
   .stats{
     @apply font-bold text-4xl text-black
