@@ -113,6 +113,7 @@ function calculateStats(data){
     amount: data[1][data[0].product]
   }
   amount_raised = amount_raised + parseFloat(pledge.amount)
+  document.getElementById('amount_raised').innerText = `$${(amount_raised).toLocaleString()}`
   progress_bar = (amount_raised / TARGET_AMOUNT) * 100
   // round progress_bar to two decimal places
   progress_bar = Math.round(progress_bar * 100) / 100
