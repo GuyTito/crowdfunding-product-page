@@ -13,8 +13,8 @@ module.exports = {
         sans : ["'Commissioner'", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
-        "hero": "url('./images/image-hero-mobile.jpg')",
-        "hero-d": "url('./images/image-hero-desktop.jpg')",
+        "hero": "linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 40%), url('./images/image-hero-mobile.jpg')",
+        "hero-d": "linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 40%), url('./images/image-hero-desktop.jpg')",
       },
     },
   },
