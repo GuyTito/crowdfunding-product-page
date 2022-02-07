@@ -105,6 +105,7 @@ let total_backers = 5007
 function calculateStats(data){
   if (data[0].product == 'no_reward') {
     ++total_backers
+    document.getElementById('total_backers').innerText = (total_backers).toLocaleString()
     return
   }
   
@@ -118,5 +119,6 @@ function calculateStats(data){
   // round progress_bar to two decimal places
   progress_bar = Math.round(progress_bar * 100) / 100
   ++total_backers
+  document.getElementById('total_backers').innerText = (total_backers).toLocaleString()
   --products_left[pledge.name]
 }
