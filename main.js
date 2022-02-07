@@ -42,9 +42,9 @@ radio_btns.forEach((radio) => {
 function hideAllPledges() {
   disableNumberInputs()
   radio_btns.forEach((radio) => {
-   let pledge = document.querySelector(`#${radio.value}`)
-   if (pledge.classList.contains("hidden")) return
-   else pledge.classList.add('hidden')
+    let pledge = document.querySelector(`#${radio.value}`)
+    if (pledge.classList.contains("hidden")) return
+    pledge.classList.add('hidden')
  })
 }
 
@@ -92,9 +92,9 @@ form.addEventListener('submit', (e) => {
 success_modal.querySelector('section>button').addEventListener('click', () => success_modal.style.display = "none")
 
 
-const target_amount = 100000
+const TARGET_AMOUNT = 100000
 let amount_raised = 89914
-let progress_bar = (amount_raised / target_amount) * 100
+let progress_bar = (amount_raised / TARGET_AMOUNT) * 100
 let products_left = {
   bamboo: 101,
   black_stand: 64,
@@ -104,14 +104,13 @@ let total_backers = 5007
 
 function calculateStats(data){
   if (data[0].product == 'no_reward') return
-  else {
-    let pledge = {
-      name: data[0].product, 
-      amount: data[1][data[0].product]
-    }
-    amount_raised = amount_raised + parseFloat(pledge.amount)
-    progress_bar = (amount_raised / target_amount) * 100
-    ++total_backers
-    --products_left[pledge.name]
+  
+  let pledge = {
+    name: data[0].product, 
+    amount: data[1][data[0].product]
   }
+  amount_raised = amount_raised + parseFloat(pledge.amount)
+  progress_bar = (amount_raised / TARGET_AMOUNT) * 100
+  ++total_backers
+  --products_left[pledge.name]
 }
