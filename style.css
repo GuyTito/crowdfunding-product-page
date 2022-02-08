@@ -456,12 +456,14 @@ header{
   }
 
   header{
+    padding-top: 2.75rem;
+  }
+}
+
+@media (min-width: 1024px){
+  header{
     padding-left: 10rem;
     padding-right: 10rem;
-  }
-
-  header{
-    padding-top: 2.75rem;
   }
 }
 
@@ -469,6 +471,9 @@ main{
   position: absolute;
   top: 235px;
   left: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
   min-width: 350px;
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -480,7 +485,7 @@ main > :not([hidden]) ~ :not([hidden]){
   margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
 }
 
-@media (min-width: 768px){
+@media (min-width: 640px){
   main{
     top: 310px;
   }
@@ -496,7 +501,7 @@ h1{
   font-weight: 700;
 }
 
-@media (min-width: 768px){
+@media (min-width: 640px){
   h1{
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -542,6 +547,18 @@ section{
   text-align: center;
 }
 
+@media (min-width: 640px){
+  section{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  section{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
 form{
   margin-left: 1.25rem;
   margin-right: 1.25rem;
@@ -553,6 +570,18 @@ form{
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   text-align: center;
+}
+
+@media (min-width: 640px){
+  form{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  form{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 }
 
 input[type="radio"]{
@@ -571,7 +600,7 @@ input::-webkit-outer-spin-button,
 
 input[type=number] {
   -moz-appearance: textfield;
-  width: 100%;
+  width: 5rem;
   border-radius: 9999px;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -684,6 +713,21 @@ input[type=number] {
   text-align: center;
 }
 
+@media (min-width: 640px){
+  .divider{
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .divider{
+    height: 90px;
+  }
+
+  .divider{
+    width: 1px;
+  }
+}
+
 .product > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
@@ -754,12 +798,41 @@ input[type=number] {
   top: 0px;
 }
 
+.top-32{
+  top: 8rem;
+}
+
+.top-12{
+  top: 3rem;
+}
+
+.top-20{
+  top: 5rem;
+}
+
+.top-16{
+  top: 4rem;
+}
+
 .z-10{
   z-index: 10;
 }
 
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mt-5{
   margin-top: 1.25rem;
+}
+
+.mt-10{
+  margin-top: 2.5rem;
+}
+
+.mt-20{
+  margin-top: 5rem;
 }
 
 .flex{
@@ -768,10 +841,6 @@ input[type=number] {
 
 .hidden{
   display: none;
-}
-
-.h-12{
-  height: 3rem;
 }
 
 .h-2\.5{
@@ -790,12 +859,32 @@ input[type=number] {
   height: 1px;
 }
 
-.w-12{
-  width: 3rem;
-}
-
 .w-full{
   width: 100%;
+}
+
+.w-\[90\%\]{
+  width: 90%;
+}
+
+.w-\[80\%\]{
+  width: 80%;
+}
+
+.w-\[87\%\]{
+  width: 87%;
+}
+
+.w-\[88\%\]{
+  width: 88%;
+}
+
+.min-w-\[350px\]{
+  min-width: 350px;
+}
+
+.max-w-\[350px\]{
+  max-width: 350px;
 }
 
 .flex-1{
@@ -805,6 +894,14 @@ input[type=number] {
 .-translate-x-1\/2{
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.flex-col{
+  flex-direction: column;
+}
+
+.items-start{
+  align-items: flex-start;
 }
 
 .items-center{
@@ -817,6 +914,14 @@ input[type=number] {
 
 .justify-between{
   justify-content: space-between;
+}
+
+.justify-around{
+  justify-content: space-around;
+}
+
+.justify-evenly{
+  justify-content: space-evenly;
 }
 
 .space-x-12 > :not([hidden]) ~ :not([hidden]){
@@ -843,12 +948,32 @@ input[type=number] {
   margin-bottom: calc(1.75rem * var(--tw-space-y-reverse));
 }
 
+.divide-y-2 > :not([hidden]) ~ :not([hidden]){
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(2px * calc(1 - var(--tw-divide-y-reverse)));
+  border-bottom-width: calc(2px * var(--tw-divide-y-reverse));
+}
+
+.divide-y > :not([hidden]) ~ :not([hidden]){
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+  border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
+}
+
 .overflow-auto{
   overflow: auto;
 }
 
 .rounded-full{
   border-radius: 9999px;
+}
+
+.rounded-lg{
+  border-radius: 0.5rem;
+}
+
+.rounded-md{
+  border-radius: 0.375rem;
 }
 
 .bg-gray-200{
@@ -870,6 +995,27 @@ input[type=number] {
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.p-5{
+  padding: 1.25rem;
+}
+
+.p-2{
+  padding: 0.5rem;
+}
+
+.p-3{
+  padding: 0.75rem;
+}
+
+.p-4{
+  padding: 1rem;
+}
+
 .px-6{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -878,6 +1024,16 @@ input[type=number] {
 .py-28{
   padding-top: 7rem;
   padding-bottom: 7rem;
+}
+
+.py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .text-left{
@@ -890,6 +1046,10 @@ input[type=number] {
 
 .font-bold{
   font-weight: 700;
+}
+
+.font-medium{
+  font-weight: 500;
 }
 
 .leading-loose{
@@ -906,21 +1066,46 @@ input[type=number] {
   color: hsl(0 0% 48% / var(--tw-text-opacity));
 }
 
-.text-Moderate-cyan{
-  --tw-text-opacity: 1;
-  color: hsl(176 50% 47% / var(--tw-text-opacity));
-}
-
-.text-Dark-cyan{
-  --tw-text-opacity: 1;
-  color: hsl(176 72% 28% / var(--tw-text-opacity));
-}
-
 .opacity-30{
   opacity: 0.3;
 }
 
+@media (min-width: 640px){
+  .sm\:block{
+    display: block;
+  }
+
+  .sm\:flex{
+    display: flex;
+  }
+
+  .sm\:hidden{
+    display: none;
+  }
+
+  .sm\:flex-none{
+    flex: none;
+  }
+
+  .sm\:space-y-0 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+
+  .sm\:space-x-3 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+    margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+}
+
 @media (min-width: 768px){
+  .md\:mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .md\:block{
     display: block;
   }
@@ -929,7 +1114,23 @@ input[type=number] {
     display: none;
   }
 
-  .md\:flex-none{
-    flex: none;
+  .md\:max-w-\[760px\]{
+    max-width: 760px;
+  }
+
+  .md\:max-w-\[7730px\]{
+    max-width: 7730px;
+  }
+
+  .md\:max-w-\[773px\]{
+    max-width: 773px;
+  }
+
+  .md\:max-w-\[400px\]{
+    max-width: 400px;
+  }
+
+  .md\:max-w-\[500px\]{
+    max-width: 500px;
   }
 }
