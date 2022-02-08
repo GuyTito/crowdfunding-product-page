@@ -135,14 +135,15 @@ const bk_mk_btn = document.querySelector('.btn-bk-mk')
 const bk_mk_svg = document.querySelector('.btn-bk-mk>svg')
 const bk_mk_txt = document.querySelector('.btn-bk-mk>span')
 bk_mk_btn.addEventListener('click', (e) => {
-  bk_mk_svg.querySelector('g>path').classList.toggle('fill-white')
   if (bk_mk_txt.innerText == "Bookmark") {
     bk_mk_txt.innerText = 'Bookmarked'
     bk_mk_txt.style.color = '#147b74'
     bk_mk_svg.querySelector('g>circle').style.fill = 	'#3cb4ac'
+    bk_mk_svg.querySelector('g>path').style.fill = 	'#FFFFFF'
   } else{
     bk_mk_txt.innerText = 'Bookmark'
     bk_mk_txt.style.color = ''
     bk_mk_svg.querySelector('g>circle').style.fill = 	''
+    bk_mk_svg.querySelector('g>path').style.fill = 	''
   }
 })
