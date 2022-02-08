@@ -30,7 +30,7 @@
     @apply text-Dark-gray
   }
   section{
-    @apply bg-white mx-5 rounded-md text-center px-4 py-10
+    @apply bg-white mx-5 rounded-md text-center px-4 md:px-10 py-10 md:py-12
   }
   form{
     @apply bg-white mx-5 rounded-md text-center px-4 py-10
