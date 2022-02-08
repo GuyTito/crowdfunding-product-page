@@ -143,7 +143,7 @@
 
   <!-- Selection modal start -->
   <div id="selection_modal" class="hidden fixed z-10 py-28 left-0 top-0 w-full h-full overflow-auto bg-black/40">
-    <form class="text-left space-y-7">
+    <form class="text-left space-y-7 md:max-w-[760px] md:mx-auto">
       <div class="flex justify-between items-center">
         <h2>Back this project</h2>
         <button id="close_modal"><img src="./images/icon-close-modal.svg" alt=""></button>
@@ -167,7 +167,7 @@
       <div id="bamboo_product" class="product">
         <label class="flex items-center space-x-3">
           <input type="radio" name="product" value="bamboo">
-          <div>
+          <div class="sm:flex sm:space-x-3">
             <h3>Bamboo Stand</h3>
             <h4>Pledge $25 or more</h4>
           </div>
@@ -181,15 +181,17 @@
         </p>
 
         <!-- Selected pledge start -->
-        <div id="bamboo" class="hidden space-y-7">
+        <div id="bamboo" class="hidden space-y-7 sm:space-y-0">
           <div class="h-px w-full bg-gray-300"></div>
-          <p class="text-center">Enter your pledge</p>
-          <div class="flex items-center space-x-3">
-            <div class="div-input">
-              <span class="text-Dark-gray">$</span>
-              <input type="number" name="bamboo" min="25" value="25">
+          <div class="sm:flex justify-between items-center space-y-7">
+            <p class="text-center">Enter your pledge</p>
+            <div class="flex items-center space-x-3">
+              <div class="div-input">
+                <span class="text-Dark-gray">$</span>
+                <input type="number" name="bamboo" min="25" value="25">
+              </div>
+              <button type="submit" class="btn-main">Continue</button>
             </div>
-            <button type="submit" class="btn-main">Continue</button>
           </div>
         </div>
         <!-- Selected pledge end -->
@@ -198,7 +200,7 @@
       <div id="black_stand_product" class="product">
         <label class="flex items-center space-x-3">
           <input type="radio" name="product" value="black_stand">
-          <div>
+          <div class="sm:flex sm:space-x-3">
             <h3>Black Edition Stand</h3>
             <h4>Pledge $75 or more</h4>
           </div>
@@ -211,15 +213,17 @@
         </p>
 
         <!-- Selected pledge start -->
-        <div id="black_stand" class="hidden space-y-7">
+        <div id="black_stand" class="hidden space-y-7 sm:space-y-0">
           <div class="h-px w-full bg-gray-300"></div>
-          <p class="text-center">Enter your pledge</p>
-          <div class="flex items-center space-x-3">
-            <div class="div-input">
-              <span class="text-Dark-gray">$</span>
-              <input type="number" name="black_stand" min="75" value="75">
+          <div class="sm:flex justify-between items-center space-y-7">
+            <p class="text-center">Enter your pledge</p>
+            <div class="flex items-center space-x-3">
+              <div class="div-input">
+                <span class="text-Dark-gray">$</span>
+                <input type="number" name="black_stand" min="75" value="75">
+              </div>
+              <button type="submit" class="btn-main">Continue</button>
             </div>
-            <button type="submit" class="btn-main">Continue</button>
           </div>
         </div>
         <!-- Selected pledge end -->
@@ -228,7 +232,7 @@
       <div id="mahogany_product" class="product opacity-30">
         <label class="flex items-center space-x-3">
           <input disabled type="radio" name="product" value="mahogany">
-          <div>
+          <div class="sm:flex sm:space-x-3">
             <h3>Mahogany Special Edition</h3>
             <h4>Pledge $200 or more</h4>
           </div>
@@ -241,7 +245,7 @@
         </p>
 
         <!-- Selected pledge start -->
-        <div id="mahogany" class="hidden space-y-7">
+        <div id="mahogany" class="hidden space-y-7 sm:space-y-0">
           <div class="h-px w-full bg-gray-300"></div>
           <p class="text-center">Enter your pledge</p>
           <div class="flex items-center space-x-3">

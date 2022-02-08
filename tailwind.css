@@ -33,7 +33,7 @@
     @apply bg-white mx-5 rounded-md text-center px-4 sm:px-10 py-10 sm:py-12
   }
   form{
-    @apply bg-white mx-5 rounded-md text-center px-4 py-10
+    @apply bg-white mx-5 rounded-md text-center px-4 sm:px-10 py-10 sm:py-12
   }
   input[type="radio"]{
     @apply h-5 w-5  accent-Dark-cyan
@@ -47,7 +47,7 @@
   /* Firefox */
   input[type=number] {
     -moz-appearance: textfield;
-    @apply pl-2 py-3 rounded-full font-bold outline-none w-full caret-Moderate-cyan
+    @apply pl-2 py-3 rounded-full font-bold outline-none w-20 caret-Moderate-cyan
   }
   
 }
