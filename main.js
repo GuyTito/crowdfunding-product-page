@@ -131,15 +131,18 @@ function calculateStats(data){
 }
 
 
-const bk_mk_btn = document.querySelector('.btn-bk-mk>span')
+const bk_mk_btn = document.querySelector('.btn-bk-mk')
+const bk_mk_svg = document.querySelector('.btn-bk-mk>svg')
+const bk_mk_txt = document.querySelector('.btn-bk-mk>span')
 bk_mk_btn.addEventListener('click', (e) => {
-  if (bk_mk_btn.innerText == "Bookmark") {
-    bk_mk_btn.innerText = 'Bookmarked'
-    bk_mk_btn.classList.remove('text-Dark-gray')
-    bk_mk_btn.classList.add('text-Dark-cyan')
+  bk_mk_svg.querySelector('g>path').classList.toggle('fill-white')
+  if (bk_mk_txt.innerText == "Bookmark") {
+    bk_mk_txt.innerText = 'Bookmarked'
+    bk_mk_txt.style.color = '#147b74'
+    bk_mk_svg.querySelector('g>circle').style.fill = 	'#3cb4ac'
   } else{
-    bk_mk_btn.innerText = 'Bookmark'
-    bk_mk_btn.classList.remove('text-Dark-cyan')
-    bk_mk_btn.classList.add('text-Dark-gray')
+    bk_mk_txt.innerText = 'Bookmark'
+    bk_mk_txt.style.color = ''
+    bk_mk_svg.querySelector('g>circle').style.fill = 	''
   }
 })
