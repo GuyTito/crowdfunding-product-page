@@ -42,11 +42,11 @@ Users should be able to:
 
 ### Built with
 
+- Mobile-first workflow
 - Semantic HTML5 markup
 - Tailwindcss
+- Javascript
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
 
 
 ## Author
