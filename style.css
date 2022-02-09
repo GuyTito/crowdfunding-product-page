@@ -426,7 +426,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 body{
-  position: relative;
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
   font-size: 16px;
@@ -468,15 +467,12 @@ header{
 }
 
 main{
-  position: absolute;
-  top: 235px;
-  left: 50%;
+  position: relative;
   margin-left: auto;
   margin-right: auto;
+  margin-top: -3rem;
   width: 100%;
   min-width: 350px;
-  --tw-translate-x: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 main > :not([hidden]) ~ :not([hidden]){
@@ -487,7 +483,7 @@ main > :not([hidden]) ~ :not([hidden]){
 
 @media (min-width: 640px){
   main{
-    top: 310px;
+    margin-top: -85px;
   }
 
   main{
@@ -782,14 +778,6 @@ input[type=number] {
   position: absolute;
 }
 
-.left-1\/2{
-  left: 50%;
-}
-
-.-top-\[30px\]{
-  top: -30px;
-}
-
 .left-0{
   left: 0px;
 }
@@ -798,41 +786,28 @@ input[type=number] {
   top: 0px;
 }
 
-.top-32{
-  top: 8rem;
+.left-1\/2{
+  left: 50%;
 }
 
-.top-12{
-  top: 3rem;
-}
-
-.top-20{
-  top: 5rem;
-}
-
-.top-16{
-  top: 4rem;
+.-top-\[30px\]{
+  top: -30px;
 }
 
 .z-10{
   z-index: 10;
 }
 
-.mx-auto{
-  margin-left: auto;
-  margin-right: auto;
+.mt-10{
+  margin-top: 2.5rem;
 }
 
 .mt-5{
   margin-top: 1.25rem;
 }
 
-.mt-10{
-  margin-top: 2.5rem;
-}
-
-.mt-20{
-  margin-top: 5rem;
+.mb-2{
+  margin-bottom: 0.5rem;
 }
 
 .flex{
@@ -843,6 +818,10 @@ input[type=number] {
   display: none;
 }
 
+.h-full{
+  height: 100%;
+}
+
 .h-2\.5{
   height: 0.625rem;
 }
@@ -851,40 +830,12 @@ input[type=number] {
   height: 0.5rem;
 }
 
-.h-full{
-  height: 100%;
-}
-
 .h-px{
   height: 1px;
 }
 
 .w-full{
   width: 100%;
-}
-
-.w-\[90\%\]{
-  width: 90%;
-}
-
-.w-\[80\%\]{
-  width: 80%;
-}
-
-.w-\[87\%\]{
-  width: 87%;
-}
-
-.w-\[88\%\]{
-  width: 88%;
-}
-
-.min-w-\[350px\]{
-  min-width: 350px;
-}
-
-.max-w-\[350px\]{
-  max-width: 350px;
 }
 
 .flex-1{
@@ -900,10 +851,6 @@ input[type=number] {
   flex-direction: column;
 }
 
-.items-start{
-  align-items: flex-start;
-}
-
 .items-center{
   align-items: center;
 }
@@ -914,14 +861,6 @@ input[type=number] {
 
 .justify-between{
   justify-content: space-between;
-}
-
-.justify-around{
-  justify-content: space-around;
-}
-
-.justify-evenly{
-  justify-content: space-evenly;
 }
 
 .space-x-12 > :not([hidden]) ~ :not([hidden]){
@@ -948,12 +887,6 @@ input[type=number] {
   margin-bottom: calc(1.75rem * var(--tw-space-y-reverse));
 }
 
-.divide-y-2 > :not([hidden]) ~ :not([hidden]){
-  --tw-divide-y-reverse: 0;
-  border-top-width: calc(2px * calc(1 - var(--tw-divide-y-reverse)));
-  border-bottom-width: calc(2px * var(--tw-divide-y-reverse));
-}
-
 .divide-y > :not([hidden]) ~ :not([hidden]){
   --tw-divide-y-reverse: 0;
   border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
@@ -964,16 +897,21 @@ input[type=number] {
   overflow: auto;
 }
 
+.rounded-md{
+  border-radius: 0.375rem;
+}
+
 .rounded-full{
   border-radius: 9999px;
 }
 
-.rounded-lg{
-  border-radius: 0.5rem;
+.bg-black\/40{
+  background-color: rgb(0 0 0 / 0.4);
 }
 
-.rounded-md{
-  border-radius: 0.375rem;
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-gray-200{
@@ -986,30 +924,9 @@ input[type=number] {
   background-color: hsl(176 50% 47% / var(--tw-bg-opacity));
 }
 
-.bg-black\/40{
-  background-color: rgb(0 0 0 / 0.4);
-}
-
 .bg-gray-300{
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-}
-
-.bg-white{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.p-5{
-  padding: 1.25rem;
-}
-
-.p-2{
-  padding: 0.5rem;
-}
-
-.p-3{
-  padding: 0.75rem;
 }
 
 .p-4{
@@ -1026,14 +943,8 @@ input[type=number] {
   padding-bottom: 7rem;
 }
 
-.py-2{
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.py-1{
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+.pt-8{
+  padding-top: 2rem;
 }
 
 .text-left{
@@ -1044,12 +955,17 @@ input[type=number] {
   text-align: center;
 }
 
-.font-bold{
-  font-weight: 700;
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-medium{
   font-weight: 500;
+}
+
+.font-bold{
+  font-weight: 700;
 }
 
 .leading-loose{
@@ -1066,8 +982,17 @@ input[type=number] {
   color: hsl(0 0% 48% / var(--tw-text-opacity));
 }
 
+.underline{
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
 .opacity-30{
   opacity: 0.3;
+}
+
+.hover\:font-bold:hover{
+  font-weight: 700;
 }
 
 @media (min-width: 640px){
@@ -1116,18 +1041,6 @@ input[type=number] {
 
   .md\:max-w-\[760px\]{
     max-width: 760px;
-  }
-
-  .md\:max-w-\[7730px\]{
-    max-width: 7730px;
-  }
-
-  .md\:max-w-\[773px\]{
-    max-width: 773px;
-  }
-
-  .md\:max-w-\[400px\]{
-    max-width: 400px;
   }
 
   .md\:max-w-\[500px\]{
