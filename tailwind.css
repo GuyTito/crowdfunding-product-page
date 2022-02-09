@@ -6,13 +6,13 @@
 
 @layer base{
   body{
-    @apply text-[16px] relative bg-gray-100
+    @apply text-[16px] bg-gray-100
   }
   header{
     @apply bg-hero md:bg-hero-d h-[287px] md:h-[395px] bg-cover bg-center bg-no-repeat flex justify-between items-start pt-[30px] md:pt-11 px-6 lg:px-40 
   }
   main{
-    @apply absolute top-[235px] sm:top-[310px] space-y-10 min-w-[350px] w-full sm:max-w-[773px] mx-auto left-1/2 -translate-x-1/2
+    @apply relative -mt-12 sm:-mt-[85px] space-y-10 min-w-[350px] w-full sm:max-w-[773px] mx-auto 
   }
   h1{
     @apply font-bold text-xl sm:text-3xl
