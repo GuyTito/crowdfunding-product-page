@@ -130,7 +130,7 @@ function calculateStats(data){
   })
 }
 
-
+// bookmarking
 const bk_mk_btn = document.querySelector('.btn-bk-mk')
 const bk_mk_svg = document.querySelector('.btn-bk-mk>svg')
 const bk_mk_txt = document.querySelector('.btn-bk-mk>span')
@@ -146,4 +146,20 @@ bk_mk_btn.addEventListener('click', (e) => {
     bk_mk_svg.querySelector('g>circle').style.fill = 	''
     bk_mk_svg.querySelector('g>path').style.fill = 	''
   }
+})
+
+
+// toggle mobile menu 
+const menu_btn = document.querySelector('header>button')
+const mobile_menu = document.getElementById('mobile-menu')
+menu_btn.addEventListener('click', ()=>{
+  mobile_menu.classList.remove('hidden')
+  document.querySelector('header>a').style.display = 'none'
+  document.querySelector('header>button').classList.add('hidden')
+})
+
+mobile_menu.querySelector('div>button').addEventListener('click', ()=> {
+  mobile_menu.classList.add('hidden')
+  document.querySelector('header>a').style.display = 'block'
+  document.querySelector('header>button').classList.remove('hidden')
 })
