@@ -8,9 +8,9 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  <!-- - [Screenshot](#screenshot) -->
-  <!-- - [Links](#links) -->
-  <!-- - [Built with](#built-with) -->
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+  - [Built with](#built-with)
 - [Author](#author)
 
 
@@ -27,22 +27,26 @@ Users should be able to:
 - See the number of total backers increment by one after confirming a pledge
 - Toggle whether or not the product is bookmarked
 
-<!-- ### Screenshot
+### Screenshot
+<details>
+<summary>Screenshot</summary>
 
-![](./screenshot.jpg) -->
+![Screenshot of project](./screenshot.png)
 
-<!-- ### Links
+</details>
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com) -->
+### Links
 
-<!-- ### Built with
+<!-- - Solution URL: [Add solution URL here](https://your-solution-url.com) -->
+- [Live Site](https://crowdfund-fm.netlify.app/)
+
+### Built with
 
 - Semantic HTML5 markup
 - Tailwindcss
 - Flexbox
 - CSS Grid
-- Mobile-first workflow -->
+- Mobile-first workflow
 
 
 ## Author
