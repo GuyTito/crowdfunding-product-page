@@ -25,6 +25,7 @@ window.onclick = function(event) {
 }
 
 
+// select radio button to select product
 const radio_btns = document.querySelectorAll('input[type="radio"]')
 radio_btns.forEach((radio) => {
   radio.addEventListener('change', () => {
@@ -33,8 +34,8 @@ radio_btns.forEach((radio) => {
     // show selected pledge
     document.querySelector(`#${radio.value}`).classList.remove('hidden')
     // in case no_reward is selected, set selected_number_input to null
-    // enable selected number input
     let selected_number_input = document.querySelector(`input[name=${radio.value}]`) || null
+    // enable selected number input
     if (selected_number_input) selected_number_input.disabled = false
   })
 })
@@ -54,7 +55,7 @@ function disableNumberInputs() {
   })
 }
 
-
+// select reward
 const reward_btns = document.querySelectorAll('.reward')
 reward_btns.forEach((reward) => {
   reward.addEventListener('click', (e) => {
@@ -73,7 +74,7 @@ reward_btns.forEach((reward) => {
   })
 })
 
-
+// submit form
 const form = document.querySelector('form')
 form.addEventListener('submit', (e) => {
   e.preventDefault()
@@ -89,6 +90,7 @@ form.addEventListener('submit', (e) => {
   success_modal.style.display = "flex"
 })
 
+// close success modal
 success_modal.querySelector('section>button').addEventListener('click', () => success_modal.style.display = "none")
 
 
@@ -157,7 +159,6 @@ menu_btn.addEventListener('click', ()=>{
   document.querySelector('header>a').style.display = 'none'
   document.querySelector('header>button').classList.add('hidden')
 })
-
 mobile_menu.querySelector('div>button').addEventListener('click', ()=> {
   mobile_menu.classList.add('hidden')
   document.querySelector('header>a').style.display = 'block'
