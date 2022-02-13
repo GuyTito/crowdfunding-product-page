@@ -770,6 +770,31 @@ input[type=number] {
   border-color: hsl(176 50% 47% / var(--tw-border-opacity));
 }
 
+#desktop-menu>a{
+  border-radius: 9999px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+#desktop-menu>a:hover{
+  background-color: rgb(255 255 255 / 0.2);
+}
+
+#mobile-menu>nav>a{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+#mobile-menu>nav>a:hover{
+  background-color: rgb(0 0 0 / 0.1);
+}
+
 .fixed{
   position: fixed;
 }
