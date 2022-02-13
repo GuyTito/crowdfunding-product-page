@@ -172,5 +172,5 @@ gsap.from('header>a', {x: -100, opacity: 0, duration: 1})
 gsap.from('header>button , #desktop-menu', {x: 100, opacity: 0, duration: 1})
 gsap.from('#desktop-menu>a', {opacity: 0, stagger: 0.2 })
 // first section in main
-gsap.from('main>section:nth-child(1)', {y: 100, opacity: 0, duration: 1})
+gsap.from('main>section', {y: 100, opacity: 0, duration: 1})
 gsap.from('main>section>img', {y: 100, opacity: 0, duration: 1, })
