@@ -164,3 +164,10 @@ mobile_menu.querySelector('div>button').addEventListener('click', ()=> {
   document.querySelector('header>a').style.display = 'block'
   document.querySelector('header>button').classList.remove('hidden')
 })
+
+
+// Animations
+// logo and menus
+gsap.from('header>a', {x: -100, opacity: 0, duration: 1})
+gsap.from('header>button , #desktop-menu', {x: 100, opacity: 0, duration: 1})
+gsap.from('#desktop-menu>a', {opacity: 0, stagger: 0.2 })
