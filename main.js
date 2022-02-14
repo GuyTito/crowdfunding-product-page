@@ -185,3 +185,9 @@ gsap.to(obj, {duration: 2, tb: total_backers, onUpdate: () => document.getElemen
   trigger: '#total_backers',
   toggleActions: 'play'
 }})
+// animate products on entry
+gsap.utils.toArray(".product").forEach(element => {
+  gsap.from(element, {duration: 1, opacity: 0, y: 50, scrollTrigger: {
+    trigger: element, toggleActions: 'restart', start: '100px bottom'
+  }})
+})
