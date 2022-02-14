@@ -176,18 +176,19 @@ gsap.from('main>section', {y: 100, opacity: 0, duration: 1})
 gsap.from('main>section>img', {y: 100, opacity: 0, duration: 1, })
 // animate stats
 gsap.registerPlugin(ScrollTrigger)
-const obj = {ar:1, tb:1}
-gsap.to(obj, {duration: 2, ar: amount_raised, onUpdate: () => document.getElementById('amount_raised').innerText = `$${(parseInt(obj.ar)).toLocaleString()}`, scrollTrigger: {
-  trigger: '#amount_raised',
-  toggleActions: 'play'
-}})
-gsap.to(obj, {duration: 2, tb: total_backers, onUpdate: () => document.getElementById('total_backers').innerText = `$${(parseInt(obj.tb)).toLocaleString()}`, scrollTrigger: {
-  trigger: '#total_backers',
-  toggleActions: 'play'
-}})
+const obj = {target: 1}
+function animateStats(stat, id){
+  gsap.to(obj, {duration: 2, target: stat, ease: "power4.out", onUpdate: () => document.getElementById(id).innerText = `$${(parseInt(obj.target)).toLocaleString()}`, scrollTrigger: {
+    trigger: `#${id}`,
+    toggleActions: 'play'
+  }})
+}
+animateStats(amount_raised, 'amount_raised')
+animateStats(total_backers, 'total_backers')
+animateStats(56, 'days_left')
 // animate products on entry
 gsap.utils.toArray(".product").forEach(element => {
   gsap.from(element, {duration: 1, opacity: 0, y: 50, scrollTrigger: {
-    trigger: element, toggleActions: 'restart', start: '100px bottom'
+    trigger: element, toggleActions: 'restart', start: '50px bottom'
   }})
 })
