@@ -174,3 +174,14 @@ gsap.from('#desktop-menu>a', {opacity: 0, stagger: 0.2 })
 // first section in main
 gsap.from('main>section', {y: 100, opacity: 0, duration: 1})
 gsap.from('main>section>img', {y: 100, opacity: 0, duration: 1, })
+// animate stats
+gsap.registerPlugin(ScrollTrigger)
+const obj = {ar:1, tb:1}
+gsap.to(obj, {duration: 2, ar: amount_raised, onUpdate: () => document.getElementById('amount_raised').innerText = `$${(parseInt(obj.ar)).toLocaleString()}`, scrollTrigger: {
+  trigger: '#amount_raised',
+  toggleActions: 'play'
+}})
+gsap.to(obj, {duration: 2, tb: total_backers, onUpdate: () => document.getElementById('total_backers').innerText = `$${(parseInt(obj.tb)).toLocaleString()}`, scrollTrigger: {
+  trigger: '#total_backers',
+  toggleActions: 'play'
+}})
