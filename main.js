@@ -5,20 +5,22 @@ const close_modal_btn = document.getElementById("close_modal")
 
 // click on back-this-project button to open selection modal 
 back_project_btn.onclick = function() {
-  gsap.to('#selection_modal', { opacity: 1, display: 'block'})
-  gsap.from('form', {duration: .5, y: '100%', opacity: 0})
+  gsap.to('#selection_modal', { opacity: 1, display: "block"})
+  gsap.from('form', {duration: .5, y: '100%',})
 }
 
 // close selection modal from close button
 close_modal_btn.onclick = function(e) {
   e.preventDefault()
-  selection_modal.style.display = "none"
+  gsap.to('form', { duration: 1, y: '100%', clearProps: "y"})
+  gsap.to('#selection_modal', { display: 'none'})
 }
 
 // click away from modal to close it
 window.onclick = function(event) {
   if (event.target == selection_modal) {
-    selection_modal.style.display = "none"
+    gsap.to('form', { duration: 1, y: '100%', clearProps: "y"})
+    gsap.to('#selection_modal', { display: 'none'})
   }
   if (event.target == success_modal) {
     success_modal.style.display = "none"
