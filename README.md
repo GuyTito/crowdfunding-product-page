@@ -37,7 +37,7 @@ Users should be able to:
 
 ### Links
 
-<!-- - Solution URL: [Add solution URL here](https://your-solution-url.com) -->
+- [Solution](https://www.frontendmentor.io/solutions/responsive-landing-page-R71W1fIfp)
 - [Live Site](https://crowdfund-fm.netlify.app/)
 
 ### Built with
@@ -47,6 +47,7 @@ Users should be able to:
 - Tailwindcss
 - Javascript
 - Flexbox
+- GSAP Animation Libray
 
 
 ## Author
