@@ -165,13 +165,17 @@ const menu_btn = document.querySelector('header>button')
 const mobile_menu = document.getElementById('mobile-menu')
 menu_btn.addEventListener('click', ()=>{
   mobile_menu.classList.remove('hidden')
+  gsap.from('#mobile-menu>nav', {y:-50, opacity: 0})
   document.querySelector('header>a').style.display = 'none'
   document.querySelector('header>button').classList.add('hidden')
+  document.body.style.overflow = 'hidden'
 })
 mobile_menu.querySelector('div>button').addEventListener('click', ()=> {
-  mobile_menu.classList.add('hidden')
+  gsap.to(mobile_menu, {opacity: 0, display: 'none', clearProps: 'all', onComplete: () => mobile_menu.classList.add('hidden')})
+  gsap.to('#mobile-menu>nav', {y:-50, opacity: 1, clearProps: 'y'})
   document.querySelector('header>a').style.display = 'block'
   document.querySelector('header>button').classList.remove('hidden')
+  document.body.style.overflow = ''
 })
 
 
