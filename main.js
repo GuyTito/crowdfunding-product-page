@@ -5,7 +5,8 @@ const close_modal_btn = document.getElementById("close_modal")
 
 // click on back-this-project button to open selection modal 
 back_project_btn.onclick = function() {
-  selection_modal.style.display = "block"
+  gsap.to('#selection_modal', { opacity: 1, display: 'block'})
+  gsap.from('form', {duration: .5, y: '100%', opacity: 0})
 }
 
 // close selection modal from close button
@@ -189,6 +190,8 @@ animateStats(56, 'days_left')
 // animate products on entry
 gsap.utils.toArray(".product").forEach(element => {
   gsap.from(element, {duration: 1, opacity: 0, y: 50, scrollTrigger: {
-    trigger: element, toggleActions: 'restart', start: '50px bottom'
+    trigger: element, toggleActions: 'play', start: '50px bottom'
   }})
 })
+// animate selection modal
+gsap.from('#selection_modal', {duration: 2, y: '100%', opacity: 0})
