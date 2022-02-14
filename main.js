@@ -5,25 +5,26 @@ const close_modal_btn = document.getElementById("close_modal")
 
 // click on back-this-project button to open selection modal 
 back_project_btn.onclick = function() {
-  gsap.to('#selection_modal', { opacity: 1, display: "block"})
-  gsap.from('form', {duration: .5, y: '100%',})
+  selection_modal.style.display = 'block'
+  form.scrollIntoView({behavior: "smooth"})
 }
 
 // close selection modal from close button
 close_modal_btn.onclick = function(e) {
   e.preventDefault()
-  gsap.to('form', { duration: 1, y: '100%', clearProps: "y"})
-  gsap.to('#selection_modal', { display: 'none'})
+  gsap.to(form, { duration: 1, y: '100%', clearProps: "y"})
+  gsap.to(selection_modal, { display: 'none'})
 }
 
 // click away from modal to close it
 window.onclick = function(event) {
   if (event.target == selection_modal) {
-    gsap.to('form', { duration: 1, y: '100%', clearProps: "y"})
-    gsap.to('#selection_modal', { display: 'none'})
+    gsap.to(form, { duration: 1, y: '100%', clearProps: "y"})
+    gsap.to(selection_modal, { display: 'none'})
   }
   if (event.target == success_modal) {
-    success_modal.style.display = "none"
+    gsap.to('#success_modal>section', { duration: .5, y: '100%', clearProps: "y"})
+    gsap.to(success_modal, { display: 'none'})
   }
 }
 
@@ -89,12 +90,17 @@ form.addEventListener('submit', (e) => {
   calculateStats(data)
   document.querySelector("input[type=radio]:checked").checked = false
   hideAllPledges()
-  selection_modal.style.display = "none"
+  gsap.to(form, { duration: 1, y: '100%', clearProps: "y"})
+  gsap.to(selection_modal, { display: 'none'})
   success_modal.style.display = "flex"
+  gsap.from('#success_modal>section', { duration: .5, y: '-100%'})
 })
 
 // close success modal
-success_modal.querySelector('section>button').addEventListener('click', () => success_modal.style.display = "none")
+success_modal.querySelector('section>button').addEventListener('click', () =>{ 
+  gsap.to('#success_modal>section', { duration: .5, y: '100%', clearProps: "y"})
+  gsap.to(success_modal, { display: 'none'})
+})
 
 
 const TARGET_AMOUNT = 100000
@@ -176,7 +182,7 @@ gsap.from('header>button , #desktop-menu', {x: 100, opacity: 0, duration: 1})
 gsap.from('#desktop-menu>a', {opacity: 0, stagger: 0.2 })
 // first section in main
 gsap.from('main>section', {y: 100, opacity: 0, duration: 1})
-gsap.from('main>section>img', {y: 100, opacity: 0, duration: 1, })
+gsap.from('main>section>img', { y: 100, opacity: 0, duration: 1, clearProps: "all"})
 // animate stats
 gsap.registerPlugin(ScrollTrigger)
 const obj = {target: 1}
@@ -195,5 +201,3 @@ gsap.utils.toArray(".product").forEach(element => {
     trigger: element, toggleActions: 'play', start: '50px bottom'
   }})
 })
-// animate selection modal
-gsap.from('#selection_modal', {duration: 2, y: '100%', opacity: 0})
