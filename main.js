@@ -195,6 +195,11 @@ function animateStats(stat, id){
 animateStats(amount_raised, 'amount_raised')
 animateStats(total_backers, 'total_backers')
 animateStats(56, 'days_left')
+//animate progress bar
+gsap.to(obj, {duration: 2, target: progress_bar, ease: "power4.out", onUpdate: () => document.getElementById('progress_bar').style.width = `${obj.target}%`, scrollTrigger: {
+  trigger: '#progress_bar',
+  toggleActions: 'play'
+}})
 // animate products on entry
 gsap.utils.toArray(".product").forEach(element => {
   gsap.from(element, {duration: 1, opacity: 0, y: 50, scrollTrigger: {
