@@ -207,7 +207,7 @@ gsap.from('main>section>img', { y: 100, startAt: {x: '-50%'}, opacity: 0, durati
 gsap.registerPlugin(ScrollTrigger)
 const obj = {target: 1}
 function animateStats(stat, id){
-  gsap.to(obj, {duration: 2, target: stat, ease: "power4.out", onUpdate: () => document.getElementById(id).innerText = `$${(parseInt(obj.target)).toLocaleString()}`, scrollTrigger: {
+  gsap.to(obj, {duration: 2, target: stat, ease: "power4.out", onUpdate: () => document.getElementById(id).innerText = `${(parseInt(obj.target)).toLocaleString()}`, scrollTrigger: {
     trigger: `#${id}`,
     toggleActions: 'play'
   }})
