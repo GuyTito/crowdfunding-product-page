@@ -200,7 +200,7 @@ gsap.from('header>button , #desktop-menu', {x: 100, opacity: 0, duration: 1})
 gsap.from('#desktop-menu>a', {opacity: 0, stagger: 0.2 })
 // first section in main
 gsap.from('main>section', {y: 100, opacity: 0, duration: 1})
-gsap.from('main>section>img', { y: 100, opacity: 0, duration: 1, clearProps: "all"})
+gsap.from('main>section>img', { y: 100, startAt: {x: '-50%'}, opacity: 0, duration: 1,})
 // animate stats
 gsap.registerPlugin(ScrollTrigger)
 const obj = {target: 1}
