@@ -847,10 +847,6 @@ input[type=number] {
   height: 100%;
 }
 
-.h-12{
-  height: 3rem;
-}
-
 .h-2\.5{
   height: 0.625rem;
 }
@@ -865,10 +861,6 @@ input[type=number] {
 
 .w-full{
   width: 100%;
-}
-
-.w-12{
-  width: 3rem;
 }
 
 .flex-1{
@@ -936,10 +928,6 @@ input[type=number] {
 
 .rounded-full{
   border-radius: 9999px;
-}
-
-.border-2{
-  border-width: 2px;
 }
 
 .bg-black\/40{
