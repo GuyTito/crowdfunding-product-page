@@ -6,6 +6,7 @@ const close_modal_btn = document.getElementById("close_modal")
 // click on back-this-project button to open selection modal 
 back_project_btn.onclick = function() {
   selection_modal.style.display = 'block'
+  gsap.from(form, {opacity: 0})
   form.scrollIntoView({behavior: "smooth"})
   document.body.style.overflow = 'hidden'
 }
@@ -79,6 +80,7 @@ reward_btns.forEach((reward) => {
     document.body.style.overflow = 'hidden'
     // scroll to product
     document.getElementById(`${reward.dataset.reward}_product`).scrollIntoView({behavior: "smooth"})
+    gsap.from(form, {opacity: 0})
     // check product
     document.querySelector(`input[value=${reward.dataset.reward}]`).checked = true
     // hide all pledges
