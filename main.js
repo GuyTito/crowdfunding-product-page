@@ -7,6 +7,7 @@ const close_modal_btn = document.getElementById("close_modal")
 back_project_btn.onclick = function() {
   selection_modal.style.display = 'block'
   form.scrollIntoView({behavior: "smooth"})
+  document.body.style.overflow = 'hidden'
 }
 
 // close selection modal from close button
@@ -14,6 +15,7 @@ close_modal_btn.onclick = function(e) {
   e.preventDefault()
   gsap.to(form, { duration: 1, y: '100%', clearProps: "y"})
   gsap.to(selection_modal, { display: 'none'})
+  document.body.style.overflow = ''
 }
 
 // click away from modal to close it
@@ -21,10 +23,12 @@ window.onclick = function(event) {
   if (event.target == selection_modal) {
     gsap.to(form, { duration: 1, y: '100%', clearProps: "y"})
     gsap.to(selection_modal, { display: 'none'})
+    document.body.style.overflow = ''
   }
   if (event.target == success_modal) {
     gsap.to('#success_modal>section', { duration: .5, y: '100%', clearProps: "y"})
     gsap.to(success_modal, { display: 'none'})
+    document.body.style.overflow = ''
   }
   if (event.target == mobile_menu) {
     gsap.to(mobile_menu, {opacity: 0, display: 'none', clearProps: 'all', onComplete: () => mobile_menu.classList.add('hidden')})
@@ -72,6 +76,7 @@ reward_btns.forEach((reward) => {
   reward.addEventListener('click', (e) => {
     // open selection modal
     selection_modal.style.display = "block"
+    document.body.style.overflow = 'hidden'
     // scroll to product
     document.getElementById(`${reward.dataset.reward}_product`).scrollIntoView({behavior: "smooth"})
     // check product
@@ -101,12 +106,14 @@ form.addEventListener('submit', (e) => {
   gsap.to(selection_modal, { display: 'none'})
   success_modal.style.display = "flex"
   gsap.from('#success_modal>section', { duration: .5, y: '-100%'})
+  document.body.style.overflow = 'hidden'
 })
 
 // close success modal
 success_modal.querySelector('section>button').addEventListener('click', () =>{ 
   gsap.to('#success_modal>section', { duration: .5, y: '100%', clearProps: "y"})
   gsap.to(success_modal, { display: 'none'})
+  document.body.style.overflow = ''
 })
 
 
